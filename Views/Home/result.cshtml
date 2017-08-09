@@ -1,0 +1,29 @@
+<html>
+<head>
+<title></title>
+</head> 
+    <body>
+        @{
+    ViewData["Title"] = "Result Page";
+}   <fieldset>
+    <h3>List of the Quotes!~</h3>
+    </fieldset>
+    <fieldset>
+        <table>
+            <tr>
+                <th> Name </th>
+                <th> Quote </th>
+            </tr> 
+            @foreach(var quotes in @ViewBag.allQuotes){
+                
+            <tr>
+                <td>@quotes["Name"]</td>
+                <td>@quotes["Quote"] @quotes["CreatedAt"]</td>
+            </tr>   
+
+            }
+ 
+        </table> 
+    </fieldset>   
+    </body> 
+</html>
